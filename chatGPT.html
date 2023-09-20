@@ -3,103 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Webpage Title</title>
+    <title>Recommended Webpages</title>
     <style>
-        /* Reset some default styles */
-        body, h1, p {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Define overall styles for the page */
-        body {
-            background-color: #f0f0f0; /* Light gray background color */
-            font-family: Arial, sans-serif;
+        /* Style for each webpage item */
+        .webpage-item {
             display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Ensure the page stretches to at least the viewport height */
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
         }
 
-        /* Header styles */
-        header {
-            background-color: #333; /* Dark background color for the header */
-            color: #fff; /* Text color for the header */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
+        /* Style for the "Expand" button and "Open" button */
+        .expand-button,
+        .open-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            cursor: pointer;
+            width: 50%; /* Make both buttons the same width */
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        /* Navigation bar styles */
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff; /* Text color for navigation links */
-            font-weight: bold;
-            text-transform: uppercase;
-            padding: 10px 0;
-            position: relative;
-        }
-
-        nav a::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #fff; /* White line color on hover */
-            transform: scaleX(0);
-            transform-origin: center;
-            transition: transform 0.3s ease;
-        }
-
-        nav a:hover::before {
-            transform: scaleX(1);
-        }
-
-        /* Main content styles */
-        main {
-            flex-grow: 1; /* Allow the middle content to grow and fill the available space */
-            padding: 20px;
-        }
-
-        /* Footer styles */
-        footer {
-            background-color: #f5f5f5; /* Light gray background color for the footer */
-            color: #333; /* Text color for the footer */
-            text-align: center;
-            padding: 10px 0;
-            margin-top: auto; /* Push the footer to the bottom of the page */
+        /* Style for the expandable content */
+        .expand-content {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>legehjelp</h1>
-        <nav>
-            <a href="#">Button 1</a>
-            <a href="#">Button 2</a>
-            <a href="#">Button 3</a>
-        </nav>
-    </header>
+    <div class="webpage-item">
+        <div>
+            <h2>Webpage Title 1</h2>
+            <button class="expand-button">Expand</button>
+            <button class="open-button" onclick="openMcDonalds()">Open McDonald's</button>
+        </div>
+        <div class="expand-content">
+            <p>This is a description of how Webpage Title 1 works.</p>
+            <p>More details about Webpage Title 1 can be added here.</p>
+        </div>
+    </div>
 
-    <main>
-        <!-- Main content goes here -->
-    </main>
+    <div class="webpage-item">
+        <h2>Webpage Title 2</h2>
+        <button class="expand-button">Expand</button>
+        <button class="open-button" onclick="openMcDonalds()">Open McDonald's</button>
+        <div class="expand-content">
+            <p>This is a description of how Webpage Title 2 works.</p>
+            <p>More details about Webpage Title 2 can be added here.</p>
+        </div>
+    </div>
+    <!-- Add more webpage items as needed -->
+    
+    <script>
+        // JavaScript to toggle the expandable content
+        const expandButtons = document.querySelectorAll('.expand-button');
+        expandButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const expandContent = button.nextElementSibling.nextElementSibling;
+                expandContent.style.display = expandContent.style.display === 'none' ? 'block' : 'none';
+            });
+        });
 
-    <footer>
-        &copy; 2023 Your Website Name | All Rights Reserved
-    </footer>
+        // JavaScript to open the McDonald's webpage when "Open McDonald's" button is clicked
+        function openMcDonalds() {
+            window.open('https://www.mcdonalds.com', '_blank');
+        }
+    </script>
 </body>
 </html>
-
