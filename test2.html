@@ -12,8 +12,9 @@
         }
 
         a {
-            color: inherit;
+            color: white;
             text-decoration: inherit;
+            margin: 10px;
         }
 
         a:hover {
@@ -23,15 +24,19 @@
         main {
             width: 100%;
             height: auto;
-            display: flex;
             justify-content: center;
-            background-color: red;
+            background: #e7eaf6; 
         }
         
         .header {
             display: flex;
             width: 100%;
-            height: 50px;
+            height: 60px;
+            background: #113f67; 
+        }
+
+        .header button {
+            margin-top:10px;
         }
 
         .header nav {
@@ -39,7 +44,12 @@
             margin-left: auto;
         }
 
-        .header li {
+        .header h1 {
+            color: white;
+            margin:10px;
+        }
+
+        li {
             list-style-type: none;
         }
 
@@ -52,15 +62,25 @@
 
         #nav-mobile {
             width: 100%;
-            background-color: gray;
+            background: #38598b; 
         }
 
         .handbook {
-            width: 90%;
-            background-color: blue;
+            padding: 20px 20px 20px;
+            margin: 20px;
+            border-top-style: dashed;
+            border-bottom-style: dashed;
         }
 
         .handbook-top {
+            display: flex;
+        }
+
+        .handbook-top h2 {
+            margin-right: auto;
+        }
+
+        .handbook-top div {
             display: flex;
         }
 
@@ -68,11 +88,17 @@
             display: none;
         }
 
+        .handbook-text {
+            background: #a2a8d3; 
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        footer {
+            padding: 10px;
+        }
+
         @media only screen and (min-width: 800px) {
-            .handbook {
-                width: 800px;                
-            }
-            
             .header nav {
                 display: flex;
 
@@ -84,6 +110,15 @@
 
             #nav-mobile {
                 display: none;
+            }
+
+            main {
+                display: flex;
+                justify-content: center;
+            }
+
+            .handbook {
+                width: 600px;
             }
 
             #handbook-mobile-button {
@@ -125,34 +160,158 @@
     </header>
     
     <main>
-        <div class="handbook">
-            <div class="handbook-top">
-                <h2>
-                    Tittel på håndbok
-                </h2>
-                <button id="handbook-mobile-button">
-                    <a href="https://www.mcdonalds.com/no/nb-no.html">
-                        <i class="fa fa-external-link" ></i>
-                    </a>
-                </button>
-                <button id="handbook-mobile-button">
-                    <i class="fa fa-expand"></i>
-                </button>
-                <button id="handbook-pc-button">
-                    <i class="fa fa-external-link">link</i>
-                </button>
-                <button id="handbook-pc-button">
-                    <i class="fa fa-external-link">les mer</i>
-                </button>
+        <div>
+            <div class="handbook">
+                <div class="handbook-top">
+                    <h2>
+                        Tittel på håndbok
+                    </h2>
+                    <div>
+                        <button id="handbook-mobile-button">
+                            <a href="https://www.mcdonalds.com/no/nb-no.html">
+                                <i class="fa fa-external-link" ></i>
+                            </a>
+                        </button>
+                        <button id="handbook-mobile-button" onclick="hideShow1()">
+                            <i class="fa fa-expand"></i>
+                        </button>
+                        <button id="handbook-pc-button">
+                            <i class="fa fa-external-link">link</i>
+                        </button>
+                        <button id="handbook-pc-button" onclick="hideShow1()">
+                            <i class="fa fa-expand">les mer</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="handbook-text" id="handbook-1" style="display: none;">
+                    <p>
+                        okokokokokokokokokokokok
+                    </p>
+                    <p>
+                        okokokokokokokokokokokok
+                    </p>
+                    <p>
+                        okokokokokokokokokokokok
+                    </p>
+                    <p>
+                        okokokokokokokokokokokok
+                    </p>
+                </div>
             </div>
-            <div class="handbook-text">
-                <p>
-
-                </p>
+            <div class="handbook">
+                <div class="handbook-top">
+                    <h2>
+                        Tittel på håndbok
+                    </h2>
+                    <div>
+                        <button id="handbook-mobile-button">
+                            <a href="https://www.mcdonalds.com/no/nb-no.html">
+                                <i class="fa fa-external-link" ></i>
+                            </a>
+                        </button>
+                        <button id="handbook-mobile-button" onclick="hideShow2()">
+                            <i class="fa fa-expand"></i>
+                        </button>
+                        <button id="handbook-pc-button">
+                            <i class="fa fa-external-link">link</i>
+                        </button>
+                        <button id="handbook-pc-button" onclick="hideShow2()">
+                            <i class="fa fa-expand">les mer</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="handbook-text" id="handbook-2" style="display: none;">
+                    <p>
+                        okokokokokokokokokokokok
+                    </p>
+                    <p>
+                        okokokokokokokokokokokok
+                    </p>
+                    <p>
+                        okokokokokokokokokokokok
+                    </p>
+                    <p>
+                        okokokokokokokokokokokok
+                    </p>
+                </div>
+            </div>
+            <div class="handbook">
+                <div class="handbook-top">
+                    <h2>
+                        Tittel på håndbok
+                    </h2>
+                    <div>
+                        <button id="handbook-mobile-button">
+                            <a href="https://www.mcdonalds.com/no/nb-no.html">
+                                <i class="fa fa-external-link" ></i>
+                            </a>
+                        </button>
+                        <button id="handbook-mobile-button" onclick="hideShow3()">
+                            <i class="fa fa-expand"></i>
+                        </button>
+                        <button id="handbook-pc-button">
+                            <i class="fa fa-external-link">link</i>
+                        </button>
+                        <button id="handbook-pc-button" onclick="hideShow3()">
+                            <i class="fa fa-expand">les mer</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="handbook-text" id="handbook-3" style="display: none;">
+                    <p>
+                        okokokokokokokokokokokok
+                    </p>
+                    <p>
+                        okokokokokokokokokokokok
+                    </p>
+                    <p>
+                        okokokokokokokokokokokok
+                    </p>
+                    <p>
+                        okokokokokokokokokokokok
+                    </p>
+                </div>
+            </div>
+            <div style="margin: 20px;">
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
+                <p> lalala lalala lalalala </p>
             </div>
         </div>
     </main>
 
+    
     <footer>
         &copy; 2023 Your Website Name | All Rights Reserved
     </footer>

@@ -8,6 +8,33 @@ function hideShow() {
   }
 }
 
+function hideShow1() {
+  var x = document.getElementById("handbook-1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function hideShow2() {
+  var x = document.getElementById("handbook-2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function hideShow3() {
+  var x = document.getElementById("handbook-3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 //kalkulator for dosering alfa-model
 function kalkulatorALFA() {
   kalk1 = document.querySelector("#kalk1").value;
