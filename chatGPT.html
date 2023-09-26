@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Webpages</title>
+    <style>
+        /* Style for each webpage item */
+        .webpage-item {
+            display: flex;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Style for the "Expand" button and "Open" button */
+        .expand-button,
+        .open-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            cursor: pointer;
+            width: 50%; /* Make both buttons the same width */
+        }
+
+        /* Style for the expandable content */
+        .expand-content {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="webpage-item">
+        <div>
+            <h2>Webpage Title 1</h2>
+            <button class="expand-button">Expand</button>
+            <button class="open-button" onclick="openMcDonalds()">Open McDonald's</button>
+        </div>
+        <div class="expand-content">
+            <p>This is a description of how Webpage Title 1 works.</p>
+            <p>More details about Webpage Title 1 can be added here.</p>
+        </div>
+    </div>
+
+    <div class="webpage-item">
+        <h2>Webpage Title 2</h2>
+        <button class="expand-button">Expand</button>
+        <button class="open-button" onclick="openMcDonalds()">Open McDonald's</button>
+        <div class="expand-content">
+            <p>This is a description of how Webpage Title 2 works.</p>
+            <p>More details about Webpage Title 2 can be added here.</p>
+        </div>
+    </div>
+    <!-- Add more webpage items as needed -->
+    
+    <script>
+        // JavaScript to toggle the expandable content
+        const expandButtons = document.querySelectorAll('.expand-button');
+        expandButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const expandContent = button.nextElementSibling.nextElementSibling;
+                expandContent.style.display = expandContent.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+
+        // JavaScript to open the McDonald's webpage when "Open McDonald's" button is clicked
+        function openMcDonalds() {
+            window.open('https://www.mcdonalds.com', '_blank');
+        }
+    </script>
+</body>
+</html>
