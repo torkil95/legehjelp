@@ -3,27 +3,24 @@ class MyHeader extends HTMLElement {
         this.innerHTML =  `
         <header>
             <div class="header">
-                <h1>legehjelp</h1>
+                <h1><a href="index.html">legehjelp</a></h1>
                 <button class="navbar-toggle" onclick="hideShow()">
                     <i class="fa fa-bars"></i>
                 </button>
                 <nav>    
-                    <li class="nav-item"><a class="nav-link" href="index.html">Genta kalk</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html">Diagnosen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Veiledere</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Normalfraser</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gentamycin.html">Genta-kalkulator</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html">Prosjekter</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                            <li><a class="dropdown-item" href="portfolio-overview.html">Portfolio Overview</a></li>
-                            <li><a class="dropdown-item" href="portfolio-item.html">Portfolio Item</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="om_oss.html">Om oss</a></li>
                 </nav>
             </div>
             <nav id="nav-mobile" style="display: none;">
-                <li class="nav-toggle-item"><a class="nav-link" href="index.html">Genta kalk</a></li>
-                <li class="nav-toggle-item"><a class="nav-link" href="index.html">Diagnosen</a></li>
-                <li class="nav-toggle-item"><a class="nav-link" href="index.html">Prosjekter</a></li> 
+                <li class="nav-item"><a class="nav-link" href="index.html">Veiledere</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Normalfraser</a></li>
+                <li class="nav-item"><a class="nav-link" href="gentamycin.html">Genta-kalkulator</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Prosjekter</a></li>
+                <li class="nav-item"><a class="nav-link" href="om_oss.html">Om oss</a></li> 
             </nav>
         </header>
         `
