@@ -8,7 +8,7 @@ class MyHeader extends HTMLElement {
                     <i class="fa fa-bars"></i>
                 </button>
                 <nav>    
-                    <li class="nav-item"><a class="nav-link" href="index.html">Veiledere</a></li>
+                    <li class="nav-item"><a class="nav-link" href="veileder.html">Veiledere</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html">Normalfraser</a></li>
                     <li class="nav-item"><a class="nav-link" href="gentamycin.html">Genta-kalkulator</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html">Prosjekter</a></li>
@@ -16,7 +16,7 @@ class MyHeader extends HTMLElement {
                 </nav>
             </div>
             <nav id="nav-mobile" style="display: none;">
-                <li class="nav-item"><a class="nav-link" href="index.html">Veiledere</a></li>
+                <li class="nav-item"><a class="nav-link" href="veileder.html">Veiledere</a></li>
                 <li class="nav-item"><a class="nav-link" href="index.html">Normalfraser</a></li>
                 <li class="nav-item"><a class="nav-link" href="gentamycin.html">Genta-kalkulator</a></li>
                 <li class="nav-item"><a class="nav-link" href="index.html">Prosjekter</a></li>
