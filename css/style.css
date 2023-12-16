@@ -4,13 +4,10 @@
 }
 
 body {
-    overflow: hidden;
 }
 
 a {
-    color: white;
-    text-decoration: inherit;
-    margin: 10px;
+   style="inherits" 
 }
 
 a:hover {
@@ -18,10 +15,9 @@ a:hover {
 }
 
 main {
+    position: relative;
     width: 100%;
     height: auto;
-    justify-content: center;
-    background: #e7eaf6; 
 }
 
 .header {
@@ -38,11 +34,22 @@ main {
 .header nav {
     display: none;
     margin-left: auto;
+    margin-top: 20px;
 }
 
 .header h1 {
     color: white;
     margin:10px;
+}
+
+header a {
+    color: white;
+    text-decoration: inherit;
+    margin: 10px;
+}
+
+header a:hover {
+    color: grey;
 }
 
 li {
@@ -90,6 +97,12 @@ li {
     padding: 10px;
 }
 
+.textbox {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 100px;
+}
+
 footer {
     position: fixed; 
     left: 0; 
@@ -97,6 +110,13 @@ footer {
     width: 100vw;
     padding: 10px;
     background: #e7eaf6;
+}
+
+.index-div {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -114,8 +134,17 @@ footer {
     }
 
     main {
-        display: flex;
-        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 760px;
+        
+    }
+
+    .index-div {
+        margin-left: auto;
+        margin-right: auto;
+        width: 760px;
+        
     }
 
     .handbook {
