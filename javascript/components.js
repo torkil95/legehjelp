@@ -9,14 +9,14 @@ class MyHeader extends HTMLElement {
                 </button>
                 <nav>    
                     <li class="nav-item"><a class="nav-link" href="veileder.html">Veiledere</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html">Normalfraser</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fraser.html">Normalfraser</a></li>
                     <li class="nav-item"><a class="nav-link" href="gentamycin.html">Genta-kalkulator</a></li>
                     <li class="nav-item"><a class="nav-link" href="om_oss.html">Om legehjelp</a></li>
                 </nav>
             </div>
             <nav id="nav-mobile" style="display: none;">
                 <li class="nav-item"><a class="nav-link" href="veileder.html">Veiledere</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html">Normalfraser</a></li>
+                <li class="nav-item"><a class="nav-link" href="fraser.html">Normalfraser</a></li>
                 <li class="nav-item"><a class="nav-link" href="gentamycin.html">Genta-kalkulator</a></li>
                 <li class="nav-item"><a class="nav-link" href="om_oss.html">Om legehjelp</a></li> 
             </nav>
