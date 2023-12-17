@@ -1,0 +1,61 @@
+body {
+  margin: 0px;
+}
+
+header {
+  font-weight: bold;
+}
+
+.logo {
+  display: inline-block;
+  width: 400px;
+  height: 50px;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.menu-button{
+  border-style:solid;
+  background-color: #F3F3F3;
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+}
+
+.menu-button:hover {
+  background-color: #E8E8E8;
+}
+
+#menu {
+  background-color: #F3F3F3;
+}
+
+.menu {
+  display: inline-block;
+  width: 300px;
+}
+
+.menu:hover {
+  background-color: #E8E8E8;
+}
+
+.box {
+  padding: 10px 40px 10px 40px;
+  margin: 20px;
+  background-color: grey;
+  display: inline-block;
+  vertical-align:top;
+  height: 400px;
+  width: 200px;
+}
+
+.text {
+  margin: 50px;
+}
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/genta.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Legehjelpen</title>
+    <script type="text/javascript" src="../javascript/components.js"></script>
+</head>
+<body>
+    <my-header></my-header> 
+    <main>
+        <div class="textbox">
+            <h1>
+            Gentamycin-kalkulator
+            </h1>
+            <br>
+            <p>*Uferdig!*</p>
+            <br>
+            <p>Mars 2023 ferdigstilte et nasjonalt utvalg nye prosedyrer for aminoglykosider(gentamycin) til voksne. Prosedyren har ikke status som nasjonal retningslinje, men representerer beste faglige anbefaling, og støttes av NSAS. Under ligger kalkulatorer som er basert på disse veilederene.</p>
+            <br>
+            <p>Tilbake til <a href="../uferdig.html">uferdige prosjekter</a></p>
+        </div>
+        <div class="box" id="kalkulator">
+            <h1> Regn ut </h1>
+            <p> Kjønn </p>
+            <select id="KalkulatorKjonn">
+              <option selected="" disabled="">--Kjønn--</option>
+              <option >Kvinne</option>
+              <option >Mann</option>
+            </select>
+            <p style="display: none;" id="KalkulatorKjonnKommentar"> </p>
+            <p> Høyde </p>
+            <input id="KalkulatorHoyde">
+            <p style="display: none;" id="KalkulatorHoydeKommentar"> </p>
+            <p> Vekt </p>
+            <input id="KalkulatorVekt">
+            <p style="display: none;" id="KalkulatorVektKommentar"> </p>
+            <p> Dose </p>
+            <input id="KalkulatorDose">
+            <p style="display: none;" id="KalkulatorDoseKommentar"> </p>
+            <button onclick="kalkulator()"> Regn ut </button>
+            <button onclick="nullstill()"> Nullstill </button>
+          </div>
+          <div class="box" id="resultat" style="display: none;">
+            <h1> Resultater </h1>
+            <p id="res1"> </p>
+            <p id="res2"> </p>
+            <p id="res3"> </p>
+            <p id="res4"> </p>
+            <p id="res5"> </p>
+            <p id="res6"> </p>
+            <p id="res6"> </p>
+            <p> fotnoter som kan være sentralt å ha her </p>
+          </div>
+          <div class="textbox">
+            <br>
+            <h1>Kilder</h1>
+            <p> - <a href="https://www.antibiotika.no/aminoglykosider/"> Prosedyre: Aminoglykosider (gentamicin/tobramycin) til voksne (>18 år). Antibiotika.no</a> </p>
+            <p> - <a href="https://www.antibiotika.no/wp-content/uploads/2023/02/Sporsmal-og-svar-aminoglykosid-prosedyre-tverrfaglig-arbeidsgruppe-pr-februar-2023.pdf"> Spørsmal og svar aminoglykosid prosedyre tverrfaglig arbeidsgruppe pr. februar 2023</a></p>
+            
+        </div>
+    </main>
+    <my-footer></my-footer>
+    <script type = "text/javascript" src="../javascript/functions.js"></script>
+    <script type = "text/javascript" src="../javascript/genta.js"></script>
+</body>
+</html>
+
+

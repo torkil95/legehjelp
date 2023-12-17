@@ -11,7 +11,6 @@ class MyHeader extends HTMLElement {
                     <li class="nav-item"><a class="nav-link" href="veileder.html">Veiledere</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html">Normalfraser</a></li>
                     <li class="nav-item"><a class="nav-link" href="gentamycin.html">Genta-kalkulator</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html">Prosjekter</a></li>
                     <li class="nav-item"><a class="nav-link" href="om_oss.html">Om legehjelp</a></li>
                 </nav>
             </div>
@@ -19,7 +18,6 @@ class MyHeader extends HTMLElement {
                 <li class="nav-item"><a class="nav-link" href="veileder.html">Veiledere</a></li>
                 <li class="nav-item"><a class="nav-link" href="index.html">Normalfraser</a></li>
                 <li class="nav-item"><a class="nav-link" href="gentamycin.html">Genta-kalkulator</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html">Prosjekter</a></li>
                 <li class="nav-item"><a class="nav-link" href="om_oss.html">Om legehjelp</a></li> 
             </nav>
         </header>
