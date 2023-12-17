@@ -117,17 +117,31 @@ footer {
     background: #e7eaf6;
 }
 
-.index-div {
+.index-photo {
+    background-image: url("../images/index-photo.jpg");
     position: relative;
-    width: 100%;
-    height: auto;
-    margin-bottom: 50px;
+    min-height: 350px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.index-div h1 {
+.index-caption {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+.index-caption span {
+    color: white;
+    background-color: #113f67;
     font-size: 40px;
     font-style: italic;
-    top: 5%;
+    padding: 5px;
+    opacity: 0.8;
 }
 
 @media only screen and (min-width: 800px) {
@@ -149,18 +163,6 @@ footer {
         margin-right: auto;
         width: 760px;
         
-    }
-
-    .index-div {
-        margin-left: auto;
-        margin-right: auto;
-        width: 760px;
-        
-    }
-
-    .index-div h1 {
-        font-size: 50px;
-        top: 10%;
     }
 
     .handbook {
