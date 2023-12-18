@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Legehjelpen</title>
+    <script type="text/javascript" src="../javascript/components.js"></script>
+</head>
+<body>
+    <my-header></my-header> 
+    <main>
+        <div class="textbox">
+            <h1>
+            Ferdigutfyllt fødselsregistreringsskjema
+            </h1>
+            <br>
+            <p>I arbeid. Planen er å kunne lage et ferdigutfyllt fødselsregistreringsskjema baser på ulike "pasienter". Endelig mål er å kunne knytte det til pasienter i openDIPS.</p>
+            <br>
+            <p>
+                <b> Under kan du prøve ut alfa-versjonen. Den baserer seg på 3 trinn:</b> <br>
+                (1) aktiver ønsket pasient (som vil auto-fylle deler av skjemaet) <br>
+                (2) fyll inn pasientinformasjonen som mangler. <br>
+                (3) klikk "send inn".  
+            </p>
+            <br>
+            <p>Tilbake til <a href="../uferdig.html">uferdige prosjekter</a></p>
+            <hr style="margin: 20px 0px 20px 0px; ">
+
+            <div style="background-color: rgb(224, 224, 224); padding: 20px;">
+                <h2> VALG AV PASIENT </h2> 
+                <br>
+                <select id="Pasient">
+                    <option selected="" disabled="">Velg pasient</option>
+                    <option >Pasient #1</option>
+                    <option >Pasient #2</option>
+                    <option >Pasient #3</option>
+                </select>
+                <button onclick="AktiverPasient()"> Aktiver </button>
+                <br><br>
+                <p><b>Aktiv pasient: </b></p>
+                <div id="PasientAktiv"> ingen pasient er aktivert. </div>
+            </div>
+            <hr style="margin: 20px 0px 20px 0px; ">
+
+            <div style="background-color: rgb(224, 224, 224); padding: 20px;">
+                <h2> MELDING OM FØDSEL </h2>
+                <p><b>Enkel-/flerfødsel</b></p>
+                <select id="Enkelflerfodsel">
+                    <option selected="" disabled="">1 - Enkel</option>
+                    <option >1 - Enkel</option>
+                    <option >2 - Dobbel</option>
+                    <option >3 - Trippel</option>
+                    <option >4 - Kvadruppel</option>
+                </select>
+            <hr style="margin: 20px 0px 20px 0px; ">
+                <h2> BARN 1 </h2>
+                <p><b>H-nummer</b></p>
+                <input id="Hnummer" placeholder="(11 siffer)">
+                <p><b>Født</b></p>
+                <input id="Født" placeholder="(dd.mm.åååå)">
+                <p><b>Kjønn</b></p>
+                <p><input type="Radio" value="gutt"> Gutt</p>
+                <p><input type="Radio" value="pike"> Pike</p>
+                <p><b>Barnet var</b></p>
+                <p><input type="Radio" value="levende"> Levende født</p>
+                <p><input type="Radio" value="dod"> Dødfødt</p>
+            <hr style="margin: 20px 0px 20px 0px; ">
+                <h2> BARNETS MOR </h2>
+                <p><b>Fødselsnummer eller fødselsdato</b></p>
+                <input id="FødselsnummerMor" placeholder="ddmmåå + personnr eller ddmmåå">
+                <br><br>
+                <p><b>Sivilstatus</b></p>
+                <p><input type="Radio" value="gift"> Gift</p>
+                <p><input type="Radio" value="samboer"> Samboer</p>
+                <br>
+                <p><b>Statsborgerskap</b></p>
+                <input id="StatsborgerskapMor" placeholder="Søk etter land">
+            <hr style="margin: 20px 0px 20px 0px; ">  
+                <h2> BARNETS FAR/MEDMOR </h2>
+                <p><input type="Radio" value="samboer"> Ukjent far/medmor</p>
+                <p><b>Fødselsnummer eller fødselsdato</b></p>
+                <input id="FødselsnummerFar" placeholder="ddmmåå + personnr eller ddmmåå">
+                <br><br>
+                <p><b>Statsborgerskap</b></p>
+                <input id="StatsborgerskapFar" placeholder="Søk etter land">
+            <hr style="margin: 20px 0px 20px 0px; "> 
+                <h2> FØDESTED </h2>
+                <p><b>Født på sykehus/fødestue</b></p>
+                <p><input type="Radio" value="sykehusja"> Ja</p>
+                <p><input type="Radio" value="sykehusnei"> Nei</p>
+            <hr style="margin: 20px 0px 20px 0px; "> 
+                <h2> INSTITUSJON </h2>
+                <input id="Institusjon" placeholder="Ullevål?">
+            <hr style="margin: 20px 0px 20px 0px; "> 
+                <h2> MELDING </h2>
+                <p><b>Signaturdato</b></p>
+                <p>*dagens dato*</p>
+                <br>
+                <p><b>Signatur</b></p>
+                <p>*ditt navn (ferdig utfylt)*</p>
+            <hr style="margin: 20px 0px 20px 0px; "> 
+                <button onclick="Avbryt()"> Avbryt </button>
+                <button onclick="Neste()"> Neste </button>
+            </div>
+            <hr style="margin: 20px 0px 20px 0px; ">
+
+            <h2> Uferdig</h2>
+            <p> 
+                - finn ut hvilke felt som er obligatoriske og skriv en "*" på de punktene. 
+                <br>
+                - Jeg må koble til openDIPS
+            </p>
+        </div>
+    </main>
+    <my-footer></my-footer>
+    <script type = "text/javascript" src="../javascript/functions.js"></script>
+    <script type = "text/javascript" src="fodsel.js"></script>
+</body>
+</html>
