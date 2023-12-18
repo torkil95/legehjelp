@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Legehjelpen</title>
     <script type="text/javascript" src="../javascript/components.js"></script>
+    <style>
+        select, input[type=text] {
+            width: 100%;
+            height: 20px;
+        }
+    </style>
 </head>
 <body>
     <my-header></my-header> 
@@ -28,7 +34,7 @@
             <p>Tilbake til <a href="../uferdig.html">uferdige prosjekter</a></p>
             <hr style="margin: 20px 0px 20px 0px; ">
 
-            <div style="background-color: rgb(224, 224, 224); padding: 20px;">
+            <div style="background-color: #d5dfe7; padding: 20px;">
                 <h2> VALG AV PASIENT </h2> 
                 <br>
                 <select id="Pasient">
@@ -37,14 +43,14 @@
                     <option >Pasient #2</option>
                     <option >Pasient #3</option>
                 </select>
-                <button onclick="AktiverPasient()"> Aktiver </button>
+                <button onclick="AktiverPasient()" style="width: 100%; text-align: left"> Aktiver </button>
                 <br><br>
-                <p><b>Aktiv pasient: </b></p>
+                <h3 style="text-decoration: underline;"><b>Aktiv pasient: </b></h3>
                 <div id="PasientAktiv"> ingen pasient er aktivert. </div>
             </div>
             <hr style="margin: 20px 0px 20px 0px; ">
 
-            <div style="background-color: rgb(224, 224, 224); padding: 20px;">
+            <div style="background-color: #d5dfe7; padding: 20px;">
                 <h2> MELDING OM FØDSEL </h2>
                 <p><b>Enkel-/flerfødsel</b></p>
                 <select id="Enkelflerfodsel">
@@ -57,34 +63,42 @@
             <hr style="margin: 20px 0px 20px 0px; ">
                 <h2> BARN 1 </h2>
                 <p><b>H-nummer</b></p>
-                <input id="Hnummer" placeholder="(11 siffer)">
+                <input id="Hnummer" type="text" placeholder="(11 siffer)">
                 <p><b>Født</b></p>
-                <input id="Født" placeholder="(dd.mm.åååå)">
-                <p><b>Kjønn</b></p>
-                <p><input type="Radio" value="gutt"> Gutt</p>
-                <p><input type="Radio" value="pike"> Pike</p>
-                <p><b>Barnet var</b></p>
-                <p><input type="Radio" value="levende"> Levende født</p>
-                <p><input type="Radio" value="dod"> Dødfødt</p>
+                <input id="Født" type="text" placeholder="(dd.mm.åååå)">
+                <br>
+                <br>
+                <div style="display: inline-block; width: 30%;">
+                    <p><b>Kjønn</b></p>
+                    <p><input type="Radio" name="kjonn" value="gutt"> Gutt</p>
+                    <p><input type="Radio" name="kjonn" value="pike"> Pike</p>
+                </div>
+                <div style="display: inline-block; width: 30%;">
+                    <p><b>Barnet var</b></p>
+                    <p><input type="Radio" name="liv" value="levende"> Levende født</p>
+                    <p><input type="Radio" name="liv" value="dod"> Dødfødt</p>
+                </div>
             <hr style="margin: 20px 0px 20px 0px; ">
                 <h2> BARNETS MOR </h2>
                 <p><b>Fødselsnummer eller fødselsdato</b></p>
-                <input id="FødselsnummerMor" placeholder="ddmmåå + personnr eller ddmmåå">
+                <input id="FødselsnummerMor" type="text" placeholder="ddmmåå + personnr eller ddmmåå">
                 <br><br>
                 <p><b>Sivilstatus</b></p>
-                <p><input type="Radio" value="gift"> Gift</p>
-                <p><input type="Radio" value="samboer"> Samboer</p>
+                <p><input id="SivilstatusGift" type="Radio" name="sivilstatus" value="gift"> Gift</p>
+                <p><input id="SivilstatusSamboer" type="Radio" name="sivilstatus" value="samboer"> Samboer</p>
                 <br>
                 <p><b>Statsborgerskap</b></p>
-                <input id="StatsborgerskapMor" placeholder="Søk etter land">
+                <input id="StatsborgerskapMor" type="text" placeholder="Søk etter land">
             <hr style="margin: 20px 0px 20px 0px; ">  
                 <h2> BARNETS FAR/MEDMOR </h2>
+                <br>
                 <p><input type="Radio" value="samboer"> Ukjent far/medmor</p>
+                <br>
                 <p><b>Fødselsnummer eller fødselsdato</b></p>
-                <input id="FødselsnummerFar" placeholder="ddmmåå + personnr eller ddmmåå">
+                <input id="FødselsnummerFar" type="text" placeholder="ddmmåå + personnr eller ddmmåå">
                 <br><br>
                 <p><b>Statsborgerskap</b></p>
-                <input id="StatsborgerskapFar" placeholder="Søk etter land">
+                <input id="StatsborgerskapFar" type="text" placeholder="Søk etter land">
             <hr style="margin: 20px 0px 20px 0px; "> 
                 <h2> FØDESTED </h2>
                 <p><b>Født på sykehus/fødestue</b></p>
@@ -92,22 +106,27 @@
                 <p><input type="Radio" value="sykehusnei"> Nei</p>
             <hr style="margin: 20px 0px 20px 0px; "> 
                 <h2> INSTITUSJON </h2>
-                <input id="Institusjon" placeholder="Ullevål?">
+                <br>
+                <input id="Institusjon" type="text" placeholder="Ullevål?">
             <hr style="margin: 20px 0px 20px 0px; "> 
                 <h2> MELDING </h2>
                 <p><b>Signaturdato</b></p>
-                <p>*dagens dato*</p>
+                <p id="datetime"></p>
                 <br>
                 <p><b>Signatur</b></p>
                 <p>*ditt navn (ferdig utfylt)*</p>
             <hr style="margin: 20px 0px 20px 0px; "> 
-                <button onclick="Avbryt()"> Avbryt </button>
-                <button onclick="Neste()"> Neste </button>
+                <button onclick="Avbryt()" style="width: calc(50% - 2px); display: inline-block;"> Avbryt </button>
+                <button onclick="Neste()" style="width: calc(50% - 2px); display: inline-block;"> Neste </button>
             </div>
             <hr style="margin: 20px 0px 20px 0px; ">
 
             <h2> Uferdig</h2>
             <p> 
+                - legg til dyamisk skjema for info om far/medmor.
+                <br>
+                - fiks at når du klikker deg inn i et felt så skifter den fra rød til hvit.
+                <br>
                 - finn ut hvilke felt som er obligatoriske og skriv en "*" på de punktene. 
                 <br>
                 - Jeg må koble til openDIPS
