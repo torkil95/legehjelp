@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../images/icon.png" type="image/x-icon"/>
+    <title>Legehjelpen</title>
+    <script type="text/javascript" src="../javascript/components.js"></script>
+    <style>
+        hr {
+            margin: 20px 0px 20px 0px;
+        }
+
+        button, input[type="text"] {
+            width: 100%;
+            height: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <my-header></my-header> 
+    <main>
+        <div class="textbox">
+            <h1>openDIPS - tilkobling på en enkel måte.</h1>
+            <br>
+            <p>I arbeid. Her er målet å kunne koble til databasen openDIPS og få ut brukbar "pasientinformasjon" (ikke ekte person), slik at dette kan brukes på en relevant måte. </p>
+            <br>
+            <p>Tilbake til <a href="../uferdig.html">uferdige prosjekter</a></p>
+            <hr>
+            <h2>Trinn 1: Legg inn personlig dips-subscription-key</h2>
+            <br>
+            <input type="text" name="dips-subscription-key" placeholder="dips-subscription-key">
+            <button onclick="subscriptionKey()"> Aktiver </button>
+            <br><br>
+            <div id="resultater"><b>Aktivert dips-subscription-key: </b></div>
+            <hr>
+            <h2>Trinn 2: Koble til openDIPS</h2>
+            <br>
+            <button onclick="getAPI()"> Logg inn til openDIPS </button>
+            <hr>
+            <h2>Trinn 3: Bekreft at pasientinformasjonen er kommet</h2>
+            <br>
+            <p> *her skal pasientinformasjon komme </p>
+            <hr>
+            <h2>Trinn 4: Ta i bruk pasientinformasjon</h2>
+            <br>
+            <p> *gjør noe med pasientinformasjonen* </p>
+            <hr>
+            <h2>Notater: hvordan kan du gjøre det samme?</h2>
+            <br>
+            <p> skaff den en dips-subscription-key ved å lage deg en gratis bruker i openDIPS her: *link* </p>
+            <p> ...her kommer det mer greier...</p>
+        </div>
+    </main>
+    <my-footer></my-footer>
+    <script type = "text/javascript" src="../javascript/functions.js"></script>
+    <script type = "text/javascript" src="javascript/opendips.js"></script>
+</body>
+</html>
